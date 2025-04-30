@@ -1,0 +1,17 @@
+import type { ReactNode } from "react"
+
+interface ServiceFeatureProps {
+  icon: ReactNode
+  title: string
+  description: string
+}
+
+export default function ServiceFeature({ icon, title, description }: ServiceFeatureProps) {
+  return (
+    <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md">
+      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-100">{icon}</div>
+      <h3 className="mb-2 text-lg font-medium text-gray-900">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  )
+}
